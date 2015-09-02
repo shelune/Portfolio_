@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Colfax Italic';
+    src: url(../fonts/colfax-italic.otf);
+}
+
+@font-face {
+    font-family: 'Colfax Bold';
+    src: url(../fonts/Colfax-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Colfax Regular';
+    src: url(../fonts/Colfax-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Colfax Medium';
+    src: url(../fonts/Colfax-Medium.ttf);
+}
+}
