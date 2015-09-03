@@ -22,8 +22,8 @@ html {
 
 *, *:after, *:after {
     box-sizing: inherit;
-    -webkit-transition: all cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.3s;
-    transition: all cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.3s;
+    transition: -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 ::-moz-selection {
@@ -125,11 +125,17 @@ body {
     padding: 0;
 }
 
-.fullpage {
-    background: #012935;
+/* arrow */
+.arrow {
+    width: 100%;
+    background: transparent url("../img/arrow.png") no-repeat scroll center center;
+    height: 30px;
+    bottom: 20px;
+    position: fixed;
+    z-index: 1;
 }
 
-/* page 1 _ header */
+/* page 1  */
 
 header {
     background: #06a2ce;
@@ -168,6 +174,10 @@ header {
     color: #57bbd7;
 }
 
+.section1 {
+    background-color: #012935;
+}
+
 .wandering {
     position: relative;
     text-align: center;
@@ -182,10 +192,101 @@ header {
     background-position: center;
 }
 
+.quote {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+}
 
+.quote h2 {
+    font-weight: 300;
+    font-size: 16px;
+}
 
+.quote h3 {
+    text-transform: uppercase;
+    margin-top: -5px;
+    text-align: center;
+    font-size: 14px;
+}
 
+.section2 {
+    background-color: #06a2ce;
+}
 
+.skill-panels {
+    text-align: center;
+}
+
+.top-part {
+    position: relative;
+}
+
+.photoshop {
+    overflow: hidden;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    opacity: 0;
+    margin: 0 auto;
+    height: 100%;
+    width: 800px;
+}
+
+.content > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.content:hover {
+    opacity: 1;
+    background: rgba(89, 84, 148, 0.5);
+}
+
+.panel-name {
+    font-size: 30px;
+    padding-bottom: 50px;
+    color: #fff;
+}
+
+.visit {
+    margin-top: 30px;
+}
+
+.visit a {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Colfax Bold', sans-serif;
+    padding: 8px 30px;
+    display: inline-block;
+    border: 1px solid #fff;
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+
+.visit:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.visit a:hover {
+    color: #1e1959;
+}
 
 
 
