@@ -174,7 +174,7 @@ header {
     color: #57bbd7;
 }
 
-.section1 {
+#section1 {
     background-color: #012935;
 }
 
@@ -183,13 +183,16 @@ header {
     text-align: center;
     font-weight: 300;
 }
-
 .gif-walking {
     text-align: center;
     margin: 0 auto;
-    height: 260px;
-    background: url(../img/person_walking.gif) no-repeat;
-    background-position: center;
+    left: 0;
+    right: 0;
+}
+
+.gif-walking img {
+    text-align: center;
+    margin: 0 auto;
 }
 
 .quote {
@@ -211,7 +214,7 @@ header {
     font-size: 14px;
 }
 
-.section2 {
+#section2 {
     background-color: #012935;
 }
 
@@ -345,7 +348,7 @@ header {
 
 
 /* Section 3 starts */
-.section3 {
+#section3 {
     background-color: #012935;
 }
 
@@ -431,7 +434,55 @@ header {
     background-color: #fff;
 }
 
+/* Section 3 ends */
 
+/* Section 4 starts */
+#section4 {
+    background: #012935;
+}
+
+.email-me {
+    background: #014e64;
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    background: #014e64;
+    padding: 20px 0;
+}
+
+.copyright-block {
+    width: 35%;
+    display: block;
+    float: left;
+    font-size: 14px;
+}
+
+.short-intro {
+    font-size: 22px;
+    position: relative;
+    font-family: 'Colfax Medium', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.copyright {
+    color: #898989;
+    letter-spacing: 1px;
+}
+
+.socials-block {
+    float: right;
+}
+
+.socials-block h4 {
+    font-size: 22px;
+    font-family: 'Colfax Medium', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 
 
 /* ==========================================================================
