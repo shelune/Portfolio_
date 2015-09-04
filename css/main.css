@@ -22,7 +22,7 @@ html {
 
 *, *:after, *:after {
     box-sizing: inherit;
-    transition: -webkit-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -212,7 +212,7 @@ header {
 }
 
 .section2 {
-    background-color: #06a2ce;
+    background-color: #012935;
 }
 
 .skill-panels {
@@ -238,7 +238,6 @@ header {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    opacity: 0;
     margin: 0 auto;
     height: 100%;
     width: 800px;
@@ -254,18 +253,73 @@ header {
 }
 
 .content:hover {
-    opacity: 1;
-    background: rgba(89, 84, 148, 0.5);
+    background: rgba(197, 206, 227, 0.3);
 }
 
 .panel-name {
     font-size: 30px;
     padding-bottom: 50px;
-    color: #fff;
+    color: #57bbd7;
+    text-shadow: 1px 1px 2px #000;
+    opacity: 0;
 }
 
 .visit {
     margin-top: 30px;
+    opacity: 0;
+}
+
+.content:hover .visit {
+    -webkit-animation: 0.3s cubic-bezier(0.2, 0.3, 0.25, 0.9) normal forwards 1 slideUp;
+    animation: 0.3s cubic-bezier(0.2, 0.3, 0.25, 0.9) normal forwards 1 slideUp;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+@-webkit-keyframes slideUp {
+    0% {
+        margin-top: 42px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 30px;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        margin-top: 42px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 30px;
+    }
+}
+
+.content:hover .panel-name {
+    -webkit-animation: 0.3s cubic-bezier(0.2, 0.3, 0.25, 0.9) 1.2s normal forwards 1 slideDown;
+    animation: 0.3s cubic-bezier(0.2, 0.3, 0.25, 0.9) 1.2s normal forwards 1 slideDown;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+@-webkit-keyframes slideDown {
+    0% {
+        padding-bottom: 62px;
+    }
+    100% {
+        opacity: 1;
+        padding-bottom: 50px;
+    }
+}
+@keyframes slideDown {
+    0% {
+        padding-bottom: 62px;
+    }
+    100% {
+        opacity: 1;
+        padding-bottom: 50px;
+    }
 }
 
 .visit a {
@@ -274,7 +328,7 @@ header {
     font-family: 'Colfax Bold', sans-serif;
     padding: 8px 30px;
     display: inline-block;
-    border: 1px solid #fff;
+    border: 1px solid #57bbd7;
     letter-spacing: 1px;
     font-size: 22px;
 }
@@ -285,14 +339,97 @@ header {
 }
 
 .visit a:hover {
-    color: #1e1959;
+    color: #06a2ce;
+    border-color: #fff;
 }
 
 
+/* Section 3 starts */
+.section3 {
+    background-color: #012935;
+}
 
+.square-panels {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: row;
+    -webkit-flex: row wrap;
+    -ms-flex: row wrap;
+    flex: row wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
 
+.square-panels p {
+    font-size: 30px;
+    text-indent: -100000px;
+}
 
+.github, .java, .python {
+    width: 128px;
+    height: 128px;
+    padding: 10px;
+    border: 2px solid #fff;
+    overflow: hidden;
+    position: relative;
+}
 
+.python {
+    background-image: url(../img/python-64-color.png);
+    background-repeat: no-repeat;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+    background-position: -128px;
+}
+
+.java {
+    background-image: url(../img/java-64-color.png);
+    background-repeat: no-repeat;
+    background-position: -128px;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.github {
+    background-image: url(../img/github-64-color.png);
+    background-repeat: no-repeat;
+    background-position: -128px;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.github img, .python img, .java img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: left 0.3s;
+    transition: left 0.3s;
+}
+
+.github:hover img, .java:hover img, .python:hover img {
+    left: 192px;
+}
+
+.github:hover {
+    background-position: center;
+    background-color: #fff;
+}
+
+.java:hover {
+    background-position: center;
+    background-color: #fff;
+}
+
+.python:hover {
+    background-position: center;
+    background-color: #fff;
+}
 
 
 
