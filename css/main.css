@@ -22,8 +22,6 @@ html {
 
 *, *:after, *:after {
     box-sizing: inherit;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
 }
 
 ::-moz-selection {
@@ -172,6 +170,8 @@ header {
 .nav-right li a:hover {
     background: #080808;
     color: #57bbd7;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 #section1 {
@@ -256,6 +256,8 @@ header {
 }
 
 .content:hover {
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
     background: rgba(197, 206, 227, 0.3);
 }
 
@@ -371,48 +373,68 @@ header {
     text-indent: -100000px;
 }
 
-.icon {
-    position: relative;
-    overflow: hidden;
+.github, .java, .python {
     width: 128px;
     height: 128px;
-    border: 0px solid #fff;
+    padding: 10px;
+    border: 2px solid #fff;
+    overflow: hidden;
+    position: relative;
 }
 
-.icon::before, .icon::after {
-    display: block;
+.python {
+    background-image: url(../img/python-64-color.png);
+    background-repeat: no-repeat;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+    background-position: -128px;
+}
+
+.java {
+    background-image: url(../img/java-64-color.png);
+    background-repeat: no-repeat;
+    background-position: -128px;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.github {
+    background-image: url(../img/github-64-color.png);
+    background-repeat: no-repeat;
+    background-position: -128px;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.github img, .python img, .java img {
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../img/logos.png) no-repeat;
-    content: "";
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     -webkit-transition: left 0.3s;
     transition: left 0.3s;
 }
 
-.icon::before {
-    left: 0;
-    background-color: #014e64;
+.github:hover img, .java:hover img, .python:hover img {
+    left: 192px;
 }
 
-.icon::after {
-    left: -100%;
+.github:hover {
+    background-position: center;
+    background-color: #fff;
 }
 
-.icon:hover::before {
-    left: 100%;
+.java:hover {
+    background-position: center;
+    background-color: #fff;
 }
 
-.icon:hover::after {
-    left: 0;
-    background: url('../img/logos-color.png');
+.python:hover {
+    background-position: center;
+    background-color: #fff;
 }
-
-.icon.github::before, .icon.github::after {
-    background-position: 0 0;
-}
-
 
 /* Section 3 ends */
 
@@ -425,27 +447,113 @@ header {
     background: #014e64;
 }
 
+.email-me h2 {
+    display: block;
+    width: 100%;
+    background: #562562;
+    line-height: 50px;
+
+}
+
 footer {
     bottom: 0;
     position: absolute;
     width: 100%;
     background: #014e64;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
-.copyright-block {
-    width: 35%;
-    display: block;
-    float: left;
+.infos-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: row;
+    -webkit-flex: row wrap;
+    -ms-flex: row wrap;
+    flex: row wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
     font-size: 14px;
 }
 
-.short-intro {
-    font-size: 22px;
-    position: relative;
-    font-family: 'Colfax Medium', sans-serif;
+.place, .sites, .phone {
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.place h4, .phone h4, .sites h4 {
+    font-size: 22px;
+    font-family: 'Colfax Medium', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 22px;
+    margin-bottom: 0;
+}
+
+.facebook, .youtube {
+    line-height: 46px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.facebook a, .youtube a {
+    position: relative;
+    display: inline-block;
+}
+
+.facebook-link, .youtube-link {
+    color: #014e64;
+}
+
+.facebook-link::before {
+    content: attr(data-letters);
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #fff;
+    width: 0%;
+    z-index: 2;
+    -webkit-transition: all 0.4s 0.3s;
+    transition: all 0.4s 0.3s;
+}
+
+.facebook-link::after, .youtube-link:after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    top: 50%;
+    margin-top: -10px;
+    right: 0;
+    background: #fff;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transtion-timing-function: cubic-bezier(0.7,0.3,1);
+}
+
+.facebook-link:hover::after, .youtube-link:hover::after {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.facebook-link:hover::before, .youtube-link:hover::before {
+    width: 100%;
+}
+
+.youtube-link::before {
+    content: attr(data-letters);
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    left: 0;
+    width: 0%;
+    overflow: hidden;
+    -webkit-transition: all 0.4s 0.3s;
+    transition: all 0.4s 0.3s;
+    white-space: nowrap;
 }
 
 .copyright {
@@ -453,17 +561,7 @@ footer {
     letter-spacing: 1px;
 }
 
-.socials-block {
-    float: right;
-}
-
-.socials-block h4 {
-    font-size: 22px;
-    font-family: 'Colfax Medium', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
+/* http://pastebin.com/73W8BnF6 */
 
 /* ==========================================================================
    Helper classes
