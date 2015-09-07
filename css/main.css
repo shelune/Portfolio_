@@ -444,15 +444,59 @@ header {
 }
 
 .email-me {
-    background: #014e64;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .email-me h2 {
     display: block;
-    width: 100%;
-    background: #562562;
-    line-height: 50px;
+    background: #06a2ce;
+    line-height: 60px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 0;
+}
 
+.email-me input {
+    outline: none;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    width: 100%;
+    border-bottom: 1px solid #06a2ce;
+}
+
+#email {
+    width: 100%;
+    color: #000;
+    padding: 10px 20px;
+    outline: none;
+    float: left;
+    resize: none;
+}
+
+.email-me button {
+    margin: 0;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Colfax Medium', sans-serif;
+    width: 100%;
+    background: #06a2ce;
+}
+
+.send-btn {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    line-height: 60px;
+}
+
+.email-me button:hover {
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+    background: #014e64;
 }
 
 footer {
@@ -460,7 +504,7 @@ footer {
     position: absolute;
     width: 100%;
     background: #014e64;
-    padding: 15px 0;
+    padding: 15px 20px;
 }
 
 .infos-block {
