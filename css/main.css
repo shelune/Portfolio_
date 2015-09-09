@@ -25,12 +25,12 @@ html {
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: Blanchedalmond;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: Blanchedalmond;
     text-shadow: none;
 }
 
@@ -118,7 +118,7 @@ body {
 }
 
 .wrapper {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0;
 }
@@ -133,13 +133,13 @@ body {
     z-index: 1;
 }
 
-/* page 1  */
+/* page 1 starts */
 
 header {
-    background: #06a2ce;
-    position: absolute;
     width: 100%;
     top: 0;
+    background: #06a2ce;
+    position: absolute;
 }
 
 .name-left {
@@ -168,8 +168,8 @@ header {
 }
 
 .nav-right li a:hover {
-    background: #080808;
-    color: #57bbd7;
+    background: rgba(255, 255, 255, 0.5);
+    color: #012935;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
@@ -196,7 +196,7 @@ header {
 }
 
 .quote {
-    width: 400px;
+    max-width: 450px;
     margin: 0 auto;
     text-align: center;
     margin-top: 30px;
@@ -213,6 +213,10 @@ header {
     text-align: center;
     font-size: 14px;
 }
+
+/* page 1 ends */
+
+/* page 2 starts */
 
 #section2 {
     background-color: #012935;
@@ -348,8 +352,9 @@ header {
     border-color: #fff;
 }
 
+/* page 2 ends */
 
-/* Section 3 starts */
+/* page 3 starts */
 #section3 {
     background-color: #012935;
 }
@@ -436,16 +441,20 @@ header {
     background-color: #fff;
 }
 
-/* Section 3 ends */
+/* page 3 ends */
 
-/* Section 4 starts */
+/* page 4 starts */
 #section4 {
     background: #012935;
 }
 
 .email-me {
     width: 75%;
-    margin: 0 auto;
+    margin: 0 auto 80px auto;
+}
+
+.email-me form {
+    width: 100%;
 }
 
 .email-me h2 {
@@ -467,7 +476,7 @@ header {
     border-bottom: 1px solid #06a2ce;
 }
 
-#email {
+#email-content {
     width: 100%;
     color: #000;
     padding: 10px 20px;
@@ -476,24 +485,23 @@ header {
     resize: none;
 }
 
-.email-me button {
-    margin: 0;
-    border: none;
-    color: #fff;
-    text-transform: uppercase;
+#send-btn {
     font-family: 'Colfax Medium', sans-serif;
-    width: 100%;
-    background: #06a2ce;
-}
-
-.send-btn {
     font-size: 30px;
     padding: 0;
     margin: 0;
     line-height: 60px;
+    background: #06a2ce;
+    border: none;
+    color: #fff;
 }
 
-.email-me button:hover {
+#send-btn[value] {
+    text-transform: uppercase;
+
+}
+
+#send-btn:hover {
     -webkit-transition: background 0.3s ease;
     transition: background 0.3s ease;
     background: #014e64;
@@ -543,7 +551,7 @@ footer {
     overflow: hidden;
 }
 
-.facebook a, .youtube a {
+.facebook-link, .youtube-link {
     position: relative;
     display: inline-block;
 }
@@ -689,6 +697,65 @@ footer {
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (max-width: 600px) {
+    .name-left  {
+        display: none;
+    }
+
+    .nav-right {
+        float: left;
+        margin: 0 auto;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: row;
+        -webkit-flex: row wrap;
+        -ms-flex: row wrap;
+        flex: row wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .gif-walking img {
+        height: 120px;
+    }
+
+    .wandering {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .quote {
+        max-width: 300px;
+        margin-top: 50px;
+    }
+
+    .email-me h2 {
+        font-size: 14px;
+    }
+
+    #email-content {
+        height: 60px;
+    }
+
+    #send-btn {
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .place h4, .phone h4, .sites h4 {
+        font-size: 14px;
+    }
+
+    .place p, .phone p, .sites p {
+        font-size: 12px;
+    }
+
 }
 
 @media print,

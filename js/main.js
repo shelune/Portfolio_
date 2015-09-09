@@ -4,9 +4,25 @@
 "use strict";
 
 $(document).ready(function () {
+
+    function resize() {
+        if ($(window).width() > 600) {
+            $('.thumbnail img').attr('src', 'img/banner1.png');
+            $('.sites h4').text('Check this out!');
+        } else {
+            $('.sites h4').text('Socials');
+            $('.youtube-link').text("");
+            $('.facebook span').remove();
+        }
+    }
+
     $('li').click(function (e) {
         e.preventDefault();
     });
+
+    resize();
+    $(window).on('resize', resize);
+
     $('.fullpage').fullpage({
         verticalCentered: true,
         scrollingSpeed: 700,

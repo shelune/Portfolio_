@@ -92,10 +92,12 @@
                 <div class="fp-section fp-table" id="section4">
                     <div class="wrapper clearfix">
                         <div class="email-me">
-                            <h2>Be nice and email me your interests.</h2>
-                            <input type="text" class="email-content" placeholder="Email Address">
-                            <textarea name="email-content" id="email" cols="30" rows="6" placeholder="Message"></textarea>
-                            <div class="send-button"><button><p class="send-btn">Send</p></button></div>
+                            <form method="post" action="email-noted.php" id="form1">
+                                <h2>Be nice and email me your interests.</h2>
+                                <input type="text" name="email-subject" placeholder="Email Subject" id="email-subject">
+                                <textarea name="email-content" id="email-content" cols="30" rows="6" placeholder="Message"></textarea>
+                                <div class="send-button"><input type="submit" name="send" id="send-btn" value="Send"></div>
+                            </form>
                         </div>
                     </div>
                     <footer>
@@ -112,8 +114,8 @@
                                 <!-- <div class="copyright"><span>© 2015 Nguyen Dinh Hieu. All Rights Reserved.</span></div> -->
                                 <div class="sites">
                                     <h4>Check this out!</h4>
-                                    <div class="facebook"><a class="facebook-link" href="#" data-letters="Facebook">Facebook </a><span> | </span></div>
-                                    <div class="youtube"><a class="youtube-link" href="#" data-letters="Youtube">Youtube</a></div>
+                                    <div class="facebook"><a class="facebook-link" href="https://www.facebook.com/lavendivine" data-letters="Facebook">Facebook </a><span> | </span></div>
+                                    <div class="youtube"><a class="youtube-link" href="https://www.youtube.com/user/hukurae" data-letters="Youtube">Youtube</a></div>
                                 </div>
                             </div>
                         </div>
