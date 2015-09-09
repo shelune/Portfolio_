@@ -4,7 +4,6 @@
 "use strict";
 
 $(document).ready(function () {
-
     function resize() {
         if ($(window).width() > 600) {
             $('.thumbnail img').attr('src', 'img/banner1.png');
@@ -16,16 +15,12 @@ $(document).ready(function () {
         }
     }
 
-    $('li').click(function (e) {
-        e.preventDefault();
-    });
-
     resize();
     $(window).on('resize', resize);
 
     $('.fullpage').fullpage({
-        verticalCentered: true,
-        scrollingSpeed: 700,
+        anchors: ['section-1', 'section-2', 'section-3', 'section-4'],
+        menu: '#menu',
         onLeave: function (index, nextIndex, direction) {
             if (nextIndex === 0) {
                 return false;

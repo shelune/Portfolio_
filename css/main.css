@@ -268,8 +268,8 @@ header {
 .panel-name {
     font-size: 30px;
     padding-bottom: 50px;
-    color: #57bbd7;
-    text-shadow: 1px 1px 2px #000;
+    color: #06a2ce;
+    text-shadow: 2px 1px 2px #000;
     opacity: 0;
 }
 
@@ -343,6 +343,8 @@ header {
 }
 
 .visit:hover {
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
     background-color: #fff;
     cursor: pointer;
 }
@@ -473,7 +475,7 @@ header {
     color: #000;
     padding: 10px 20px;
     width: 100%;
-    border-bottom: 1px solid #06a2ce;
+    border-bottom: 1px solid rgba(6, 162, 206, .6);
 }
 
 #email-content {
@@ -481,6 +483,7 @@ header {
     color: #000;
     padding: 10px 20px;
     outline: none;
+    border: none;
     float: left;
     resize: none;
 }
@@ -494,11 +497,8 @@ header {
     background: #06a2ce;
     border: none;
     color: #fff;
-}
-
-#send-btn[value] {
     text-transform: uppercase;
-
+    width: 100%;
 }
 
 #send-btn:hover {
@@ -697,6 +697,16 @@ footer {
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (max-width: 768px) {
+    .thumbnail img {
+        width: 700px;
+    }
+
+    .content {
+        width: 700px;
+    }
 }
 
 @media only screen and (max-width: 600px) {

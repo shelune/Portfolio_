@@ -25,17 +25,18 @@
         <div id="superContainer">
             <div class="arrow"></div>
             <div class="fullpage">
-                <div class="fp-section fp-table" id="section1">
+                <div class="fp-section fp-table" id="section1" data-anchor="section-1">
                     <header>
                         <div class="wrapper clearfix">
                             <div class="name-left">
                                 <img src="img/shelune.png" alt="">
                             </div>
                             <nav class="nav-right">
-                                <ul>
-                                    <li class="active"><a href="#section1">Home</a></li>
-                                    <li><a href="#section2">Works</a></li>
-                                    <li><a href="#section4">Contact</a></li>
+                                <ul id="mnenu">
+                                    <li class="active" data-menuanchor="section-1"><a href="#section-1">Home</a></li>
+                                    <li data-menuanchor="section-2"><a href="#section-2">Works</a></li>
+                                    <li data-menuanchor="section-3"><a href="#section-3">Repositories</a></li>
+                                    <li data-menuanchor="section-4"><a href="#section-4">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -55,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="fp-section fp-table" id="section2">
+                <div class="fp-section fp-table" id="section2" data-anchor="section-2">
                     <div class="wrapper clearfix">
                         <div class="skill-panels">
                             <div class="top-part">
@@ -71,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="fp-section fp-table" id="section3">
+                <div class="fp-section fp-table" id="section3" data-anchor="section-3">
                     <div class="wrapper">
                         <div class="square-panels">
                             <div class="github">
@@ -89,14 +90,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="fp-section fp-table" id="section4">
+                <div class="fp-section fp-table" id="section4" data-anchor="section-4">
                     <div class="wrapper clearfix">
                         <div class="email-me">
-                            <form method="post" action="email-noted.php" id="form1">
+                            <form method="post" action="email-noted.php" id="form1" name="form1">
                                 <h2>Be nice and email me your interests.</h2>
-                                <input type="text" name="email-subject" placeholder="Email Subject" id="email-subject">
+                                <input type="text" name="email-sender" placeholder="Your Email" id="email-sender">
+                                <input type="text" name="subject" placeholder="Subject" id="subject">
                                 <textarea name="email-content" id="email-content" cols="30" rows="6" placeholder="Message"></textarea>
-                                <div class="send-button"><input type="submit" name="send" id="send-btn" value="Send"></div>
+                                <div class="send-button"><button type="submit" name="send-btn" id="send-btn">Send</button></div>
                             </form>
                         </div>
                     </div>
