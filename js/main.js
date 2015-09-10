@@ -5,13 +5,15 @@
 
 $(document).ready(function () {
     function resize() {
-        if ($(window).width() > 600) {
+        if ($(window).width() >= 768) {
             $('.thumbnail img').attr('src', 'img/banner1.png');
             $('.sites h4').text('Check this out!');
         } else {
+            if ($(window).width() <= 360) {
+                $('.visit a').text('PTS Collection').css("font-size", "20px");
+            }
+            $('.thumbnail img').attr('src', 'img/poster1.png');
             $('.sites h4').text('Socials');
-            $('.youtube-link').text("");
-            $('.facebook span').remove();
         }
     }
 
@@ -20,7 +22,6 @@ $(document).ready(function () {
 
     $('.fullpage').fullpage({
         anchors: ['section-1', 'section-2', 'section-3', 'section-4'],
-        menu: '#menu',
         onLeave: function (index, nextIndex, direction) {
             if (nextIndex === 0) {
                 return false;
